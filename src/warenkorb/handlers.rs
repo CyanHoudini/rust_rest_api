@@ -1,7 +1,6 @@
 use actix_web::{web, HttpResponse, Responder};
 use std::sync::Mutex;
 use crate::warenkorb;
-use serde_json::Result;
 
 pub async fn index() -> &'static str {
     "Hallo"
@@ -29,7 +28,7 @@ pub async fn change_amount(id : web::Path<u32>, app_state : web::Data<Mutex<ware
     }
 }
 
-
+/*
 pub async fn remove_wares(id : web::Path<u32>, app_state : web::Json<Mutex<warenkorb::warenkorb::Warenkorb>>) -> impl Responder {
     match id.into_inner(){
         1 => {
@@ -51,7 +50,7 @@ pub async fn remove_wares(id : web::Path<u32>, app_state : web::Json<Mutex<waren
         } 
         _ => HttpResponse::InternalServerError().finish()
     }
-}
+} */
 //verwende Mutex
 pub async fn get_total_amount( app_state : web::Data<Mutex<warenkorb::warenkorb::Warenkorb>>) -> impl Responder {
     HttpResponse::Ok().json(app_state)
