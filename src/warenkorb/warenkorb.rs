@@ -12,10 +12,7 @@ pub struct ResponseStruct{
 }
 //cur {apfel : amount : 1}
 //
-pub struct JsonWarenkorb {
-    pub apfel : Apfel,
 
-}
 
 impl Warenkorb {
     pub fn new() -> Self {
