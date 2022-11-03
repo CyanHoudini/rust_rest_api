@@ -17,20 +17,6 @@ pub struct JsonWarenkorb {
 
 }
 
-
-pub struct Apfel{
-    pub amount : u32,
-    pub id : u32,
-}
-pub struct Banane{
-    pub amount : u32,
-    pub id : u32,
-}
-pub struct Kartoffel{
-    pub amount : u32,
-    pub id : u32,
-}
-
 impl Warenkorb {
     pub fn new() -> Self {
         Warenkorb{

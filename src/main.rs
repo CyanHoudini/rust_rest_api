@@ -15,7 +15,7 @@ async fn main() -> std::io::Result<()> {
             .route("/waren", web::get().to(warenkorb::handlers::get_total_amount))
             .route("/ware/{id}", web::get().to(warenkorb::handlers::get_single_amount))
             .route("/change-amount/{id}", web::patch().to(warenkorb::handlers::change_amount))
-            //.route("/remove-ware/{id}", web::get().to(warenkorb::handlers::remove_wares))
+            
     })
     .bind("127.0.0.1:8080")?
     .run()
